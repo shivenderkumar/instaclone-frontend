@@ -15,21 +15,47 @@ export default function CreatePost() {
         author:"",
         location:"",
         description:"",
+        file: ""
     })
 
     return (
         <div className="form-container">
-            <form  onSubmit={(e)=>{
+            <form action="#" method="POST" onSubmit={(e)=>{
                 e.preventDefault()
                 if(isDataEmpty(data)){
                     alert("fill all details")
                     return
                 }
+
+                const formData = new FormData();
+                formData.append("author", data.author);
+                formData.append("location", data.location);
+                formData.append("description", data.description);
+                formData.append("file", data.file);
+
                 console.log(data);
-                console.log(e.target.files);
+
+                try{
+                    fetch('/posts/create', {
+                        method: "POST",
+                        body: formData
+                    }).then(res => res.data)
+                    .then(res => console.log("res of /posts/create api : ",res))
+                }catch(error){
+                    console.log("error from /posts/create api : ",error.messgae)
+                }
+
             }}> 
                 <div>
-                    <input type="file" id="inputChooseFile" placeholder="No file chosen" />
+                    <input type="file" placeholder="No file chosen" onChange={(e)=>{
+                        //console.log(e.target.files[0].name);
+                        setData(data => {
+                            return {
+                                ...data,
+                                file: e.target.files[0].name
+                            }
+                        })
+                    }} />
                 </div>
                 <div className="auth-loc-conatiner">
                     <input type="text" id="input-auth" value={data.author} placeholder="Author" onChange={(e)=>{
