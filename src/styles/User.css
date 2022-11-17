@@ -1,0 +1,110 @@
+.post-container{
+    height: 400px ;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.post-header{
+    height: 55px;
+    padding: 0 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.header-text{
+    height: 100%;
+    background-color: white;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-dotimg{
+    height: 100%;
+    width: 20px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h5{
+    margin: 0;
+}
+
+.lighterfont{
+    font-weight: normal;
+    color: rgb(184, 182, 182);
+}
+
+.header-dotimg img{
+    height: 12px;
+    width: 20px;
+}
+
+.post-img{
+    height: 240px;         
+}
+.post-img div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;         
+}
+.post-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;      
+}
+
+.post-bar-2{
+    height: 60px;
+    padding: 0 10px;
+    border-top: 1px solid lightgray;
+}
+.div-likesharecount{
+    height: 100%;
+    float: left;
+}
+
+.div-likeshare{
+    padding-top: 10px;
+}
+.div-heartshare{
+    display: flex;
+}
+
+.div-likeshare img{
+    height: 25px;
+    width: auto;
+    padding: 0%;
+    margin-right: 10px;
+    float: left;
+}
+
+.div-likes{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.date-container{
+    margin-top: 10px;
+    float: right;
+}
+
+
+.post-bar-3{
+    height: 25px;
+    padding: 0 10px;
+}
+.post-bar-3 div{
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,15 @@
+.postview-container{
+    margin: 0;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+}
+
+.postview{
+    width: 30%;
+    padding: 0 20px;
+    background-color: white;
+}
