@@ -13,7 +13,7 @@ export default function Landing_page() {
             </div>
             <div className="landing-txt">
                 <div className="landing-cntrdiv">
-                    <h1>10x Team 04</h1>
+                    <h1>Insta Clone</h1>
                     <Link to="/posts/view"><button>Enter</button></Link>
                 </div>
             </div>
