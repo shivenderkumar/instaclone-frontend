@@ -1,10 +1,18 @@
-const BASE_URL = "http://localhost:3004/user"
+const BASE_URL = "http://localhost:8080"
 
-function getUsers(){
-    return fetch(BASE_URL)
-            .then(res =>res.json())
+function loadAllPosts() {
+    return fetch(BASE_URL + '/posts/')
+        .then(res => res.json())
+}
+
+function createPost(formData) {
+    return fetch(BASE_URL +'/posts/create', {
+        method: 'POST',
+        body: formData
+    }).then(res => res.data)
 }
 
 export {
-    getUsers
+    loadAllPosts,
+    createPost
 }
