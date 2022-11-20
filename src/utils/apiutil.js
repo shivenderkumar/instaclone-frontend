@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:8080"
+//const BASE_URL = process.env.development.BASE_URL
+const BASE_URL = process.env.production.BASE_URL
 
 function loadAllPosts() {
     return fetch(BASE_URL + '/posts/')
