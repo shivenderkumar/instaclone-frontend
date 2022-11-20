@@ -10,7 +10,7 @@ export default function Header() {
                 <img id="logo" src={logo} alt="logo" />
             </div>
             <div className="div-cameraicon">
-                <Link to="/postcreate"><img id="cameraicon" src={cameraicon} alt="cameraicon"/></Link>
+                <Link to="/posts/create"><img id="cameraicon" src={cameraicon} alt="cameraicon"/></Link>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ export default function Landing_page() {
             <div className="landing-txt">
                 <div className="landing-cntrdiv">
                     <h1>10x Team 04</h1>
-                    <Link to="/postview"><button>Enter</button></Link>
+                    <Link to="/posts/view"><button>Enter</button></Link>
                 </div>
             </div>
         </div>

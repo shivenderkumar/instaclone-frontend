@@ -1,19 +1,33 @@
 import './App.css';
 import Postview from './components/Postview';
 import Landing_page from './components/Landing_page'
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import CreatePost from './components/CreatePost';
+import { PostContextProvider } from './components/PostContext';
+
+function PostComp() {
+  return (
+    <div>
+      <h3>Main Post Comp</h3>
+      <Outlet />
+    </div>
+  );
+}
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/postview" element={<Postview />} />
-          <Route path="/postcreate" element={<CreatePost />} />
-          <Route path="/" element={<Landing_page />} />
-        </Routes>
-      </BrowserRouter>
+      <PostContextProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/posts' element={<PostComp />}>
+              <Route path="view" element={<Postview />} />
+              <Route path="create" element={<CreatePost />} />
+            </Route>
+            <Route path="/" element={<Landing_page />} />
+          </Routes>
+        </BrowserRouter>
+      </PostContextProvider>
     </>
   );
 }
