@@ -1,5 +1,5 @@
 //const BASE_URL = process.env.development.BASE_URL
-const BASE_URL = process.env.production.BASE_URL
+const BASE_URL = process.env.REACT_APP_.BASE_URL
 
 function loadAllPosts() {
     return fetch(BASE_URL + '/posts/')
