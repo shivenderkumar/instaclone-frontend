@@ -1,7 +1,5 @@
 //const BASE_URL = process.env.development.BASE_URL
-import dotenv from 'dotenv';
-dotenv.config()
-const BASE_URL = process.env.BASE_URL
+const BASE_URL = process.env.REACT_APP_.BASE_URL
 
 function loadAllPosts() {
     return fetch(BASE_URL + '/posts/')
